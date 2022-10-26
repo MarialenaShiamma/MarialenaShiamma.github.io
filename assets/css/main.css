@@ -38,18 +38,21 @@ ol, ul {
 }
 
 /* menu styling */
-.active, .btn:hover {
-	background-color: rgba(221, 167, 49, 0.222);
-	color: white;
+.active {
+	background-color: white;
+	border-radius: 50px;
+	font-weight: bold !important;
+	color:black !important;
   }
 
   .nav-item{
 	text-align:center;
+	margin: 0 6px 0 6px;
 }
 
   .nav-item:hover{
-	background-color: rgba(221, 167, 49, 0.062);
-	font-style:italic;
+	background-color: rgba(230, 193, 120, 0.766);
+	border-radius: 50px;
   }
 
   .navbar-brand{
@@ -2170,10 +2173,6 @@ input, select, textarea {
 		margin: 0 0 2em 0;
 		padding-left: 1em;
 	}
-
-		ul li {
-			padding-left: 0.5em;
-		}
 
 		ul.alt {
 			list-style: none;
