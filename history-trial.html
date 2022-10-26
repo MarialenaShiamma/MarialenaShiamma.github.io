@@ -11,33 +11,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+	 
 	</head>
 	<body class="is-preload">
 
+		<div id="navigationMenu"></div>
+        <script>
+          $(function(){ $("#navigationMenu").load("menu.html"); });
+        </script>
+
 		<!-- Page Wrapper -->
 			<div id="page-wrapper">
-
-				<!-- Header -->
-					<header id="header">
-						<h1><a href="history-trial.html">Ιστορικό Δίκης</a></h1>
-						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>MENOY</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="index.html">Αρχική</a></li>
-											<li><a href="history-kill.html">Ιστορικό Δολοφονίας</a></li>
-											<li><a href="history-trial.html">Ιστορικό Δίκης</a></li>
-											<li><a href="events.html">Εκδηλώσεις</a></li>
-											<li><a href="photos.html">Φωτογραφίες</a></li>
-											<li><a href="useful-links.html">Χρήσιμοι Συνδέσμοι</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav>
-					</header>
 
 				<!-- Main -->
 					<article id="main">
@@ -372,13 +359,12 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
