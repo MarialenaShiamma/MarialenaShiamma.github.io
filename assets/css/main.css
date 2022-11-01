@@ -167,6 +167,7 @@ ul {
   font-style: italic;
 }
 
+
 blockquote,
 q {
   quotes: none;
@@ -2846,12 +2847,11 @@ button:disabled,
 
 .spotlight:nth-child(1) {
 	/* background: rgba(241, 194, 106, 0.577); */
-	  background-image: url("/images/banner2.jpg")
+	  background-image: url("/images/bannerBeige.svg");
 }
 
 .spotlight:nth-child(2) {
 	background-image: url("/images/banner2.jpg");
-
   /* background-color: rgba(194, 140, 74, 0.473); */
 }
 
@@ -2938,12 +2938,14 @@ button:disabled,
 @media screen and (max-width: 1280px) {
   .wrapper > .inner {
     width: 90%;
+    height:100%;
   }
 }
 
 @media screen and (max-width: 980px) {
   .wrapper > .inner {
     width: 100%;
+    height: 100%;
   }
 }
 
@@ -3477,11 +3479,13 @@ background: transparent
   -ms-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
   opacity: 1;
+  background-image: url("/images/banner2.jpg");
+
   /* padding-top: 3em; */
 }
 
 #page-wrapper:before {
-  background: rgba(0, 0, 0, 0);
+  background-image: url("/images/banner2.jpg");
   content: "";
   display: block;
   display: none;
@@ -3840,17 +3844,27 @@ body.is-menu-visible #menu {
   display: block;
   width: 100%;
   height: 100%;
-  position: absolute;
   left: 0;
   top: 0;
   opacity: 0;
 }
 
+
 @media screen and (max-width: 736px) {
   #banner {
     padding: 7em 3em 5em 3em;
-    height: auto;
-    min-height: 0;
+    box-sizing: border-box;
+    background-color: black;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: default;
+    min-height: 100vh;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
   }
 
   #banner h2 {
@@ -3943,6 +3957,7 @@ body.is-preload #banner:after {
 
 @media screen and (max-width: 736px) {
   #cta .inner .actions {
+   flex-direction: column-reverse;
     max-width: none;
   }
 }
@@ -4138,7 +4153,7 @@ body.landing #footer {
 }
 
 body.is-mobile.landing #page-wrapper {
-  background: none;
+  background-image: url("/images/banner2.jpg");
 }
 
 body.is-mobile.landing #banner,
