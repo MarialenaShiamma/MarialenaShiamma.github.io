@@ -2,167 +2,167 @@
 <html>
   <style>
     * {
-  margin: 0;
-  padding: 0;
-}
+      margin: 0;
+      padding: 0;
+    }
 
-ul {
-  list-style: none;
-  margin: 0 !important;
-}
+    ul {
+      list-style: none;
+      margin: 0 !important;
+    }
 
-a {
-  text-decoration: none !important;
-  display: inline-block;
-}
+    a {
+      text-decoration: none !important;
+      display: inline-block;
+    }
 
-img {
-  max-width: 100%;
-}
+    img {
+      max-width: 100%;
+    }
 
-button:focus {
-  outline: none;
-}
+    button:focus {
+      outline: none;
+    }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color:rgba(230, 193, 120, 0.766); ;
-  margin: 0;
-}
-p {
-  font-size: 14px;
-  line-height: 26px;
-  margin: 0;
-}
-.container {
-  width: 100%;
-  max-width: 1140px;
-  padding: 0 15px;
-  box-sizing: border-box;
-  margin: 0 auto;
-}
-.timelines h2 {
-  text-align: center;
-  color: #fff;
-  font-weight: 600;
-  margin-bottom: 40px;
-  font-size: 32px;
-}
-.d-flex-2 {
-  display: flex;
-  align-items: center;
-}
-.timeline-area {
-  padding: 5% 0;
-}
-.all-timelines {
-  position: relative;
-}
-.timelines h2 {
-  text-align: center;
-  color: #fff;
-  font-weight: 600;
-  margin-bottom: 40px;
-}
-.all-timelines::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  height: 100%;
-  width: 2px;
-  background: #efa22f;
-  top: 20px;
-}
-.single-timeline {
-  margin-bottom: 22px;
-}
-.timeline-blank {
-  width: 50%;
-}
-.timeline-text {
-  width: 50%;
-  padding-left: 30px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  position: relative;
-}
-.timeline-text h6 {
-  color: black;
-  font-weight: 900;
-  display: inline-block;
-  font-size: 1rem;
-}
-.timeline-text span {
-  color: black;
-  display: block;
-  width: 100%;
-}
-.single-timeline:nth-child(even) .timeline-text span {
-  text-align: right;
-}
-.t-square {
-  content: "";
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  left: -6px;
-  background: #efa22f;
-}
-.single-timeline:nth-child(even) {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-}
-.single-timeline:nth-child(even) .t-square {
-  right: -6px;
-  left: unset;
-}
-.single-timeline:nth-child(even) .timeline-text {
-  padding-left: 0;
-  padding-right: 30px;
-  text-align: right;
-}
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: rgba(230, 193, 120, 0.766);
+      margin: 0;
+    }
+    p {
+      font-size: 14px;
+      line-height: 26px;
+      margin: 0;
+    }
+    .container {
+      width: 100%;
+      max-width: 1140px;
+      padding: 0 15px;
+      box-sizing: border-box;
+      margin: 0 auto;
+    }
+    .timelines h2 {
+      text-align: center;
+      color: #fff;
+      font-weight: 600;
+      margin-bottom: 40px;
+      font-size: 32px;
+    }
+    .d-flex-2 {
+      display: flex;
+      align-items: center;
+    }
+    .timeline-area {
+      padding: 5% 0;
+    }
+    .all-timelines {
+      position: relative;
+    }
+    .timelines h2 {
+      text-align: center;
+      color: #fff;
+      font-weight: 600;
+      margin-bottom: 40px;
+    }
+    .all-timelines::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      height: 100%;
+      width: 2px;
+      background: #efa22f;
+      top: 20px;
+    }
+    .single-timeline {
+      margin-bottom: 22px;
+    }
+    .timeline-blank {
+      width: 50%;
+    }
+    .timeline-text {
+      width: 50%;
+      padding-left: 30px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      position: relative;
+    }
+    .timeline-text h6 {
+      color: black;
+      font-weight: 900;
+      display: inline-block;
+      font-size: 1rem;
+    }
+    .timeline-text span {
+      color: black;
+      display: block;
+      width: 100%;
+    }
+    .single-timeline:nth-child(even) .timeline-text span {
+      text-align: right;
+    }
+    .t-square {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      left: -6px;
+      background: #efa22f;
+    }
+    .single-timeline:nth-child(even) {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+    }
+    .single-timeline:nth-child(even) .t-square {
+      right: -6px;
+      left: unset;
+    }
+    .single-timeline:nth-child(even) .timeline-text {
+      padding-left: 0;
+      padding-right: 30px;
+      text-align: right;
+    }
 
-@media all and (max-width: 991px) {
-}
-@media all and (max-width: 768px) {
-  .all-timelines::before {
-    right: unset;
-    top: 0;
-  }
-  .single-timeline:nth-child(2n) .timeline-text {
-    padding-left: 30px;
-    padding-right: 0;
-    text-align: left;
-  }
-  .single-timeline:nth-child(2n) .t-square {
-    left: -6px;
-    right: unset;
-  }
-  .timeline-blank {
-    display: none;
-  }
-  .timeline-text {
-    width: 100%;
-  }
-  .single-timeline:nth-child(even) .timeline-text span {
-    text-align: left !important;
-  }
-}
-@media all and (max-width: 575px) {
-}
-@media all and (max-width: 360px) {
-  .all-timelines::before {
-    top: 32px;
-  }
-}
+    @media all and (max-width: 991px) {
+    }
+    @media all and (max-width: 768px) {
+      .all-timelines::before {
+        right: unset;
+        top: 0;
+      }
+      .single-timeline:nth-child(2n) .timeline-text {
+        padding-left: 30px;
+        padding-right: 0;
+        text-align: left;
+      }
+      .single-timeline:nth-child(2n) .t-square {
+        left: -6px;
+        right: unset;
+      }
+      .timeline-blank {
+        display: none;
+      }
+      .timeline-text {
+        width: 100%;
+      }
+      .single-timeline:nth-child(even) .timeline-text span {
+        text-align: left !important;
+      }
+    }
+    @media all and (max-width: 575px) {
+    }
+    @media all and (max-width: 360px) {
+      .all-timelines::before {
+        top: 32px;
+      }
+    }
   </style>
   <head>
     <title>Elements - Spectral by HTML5 UP</title>
@@ -171,6 +171,7 @@ p {
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
+    <link rel="icon" type="image/x-icon" href="assets/css/images/favicon.ico" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript
       ><link rel="stylesheet" href="assets/css/noscript.css"
@@ -196,7 +197,6 @@ p {
       });
     </script>
 
-  
     <!-- Page Wrapper -->
     <div id="page-wrapper">
       <!-- Main -->
@@ -231,7 +231,8 @@ p {
               </p>
             </div>
           </section>
-        <section class="wrapper style5">
+
+          <!-- <section class="wrapper style5">
           <div class="inner">
             <section>
               <header>
@@ -247,110 +248,97 @@ p {
               </p>
               <hr />
             </section>
-        <!-- Two -->
-        <section id="two" class="wrapper alt style2">
-          <section class="spotlight">
-            <div class="image">
-              <img src="images/pesontes/Charalampos.jpg" alt="" />
-            </div>
-            <div class="content">
-              <h2>ΧΑΡΑΛΑΜΠΟΣ ΧΡΙΣΤΟΦΗ<br /></h2>
-              <p>
-                Aliquam ut ex ut augue consectetur interdum. Donec hendrerit
-                imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.
-              </p>
-            </div>
-          </section>
-          <section class="spotlight">
-            <div class="image">
-              <img src="images/pesontes/Anastasis.jpg" alt="" />
-            </div>
-            <div class="content">
-              <h2>ΑΝΑΣΤΑΣΙΟΣ ΧΡΙΣΤΟΦΗ<br /></h2>
-              <p>
-                Aliquam ut ex ut augue consectetur interdum. Donec hendrerit
-                imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.
-              </p>
-            </div>
-          </section>
+          </section>      -->
 
-<div class="timeline-area">
-  <div class="container">
-    <!-- <div class="timelines">
+          <div class="timeline-area">
+            <div class="container">
+              <!-- <div class="timelines">
       <h2>Timelines</h2>
     </div> -->
-    <div class="all-timelines">
-      <!--SINGLE TIMELINE-->
-      <div class="single-timeline d-flex-2">
-        <div class="timeline-blank"></div>
-        <div class="timeline-text d-flex-2">
-          <span>
-            <h6>April 2019</h6> — The launch of Aryacoin; AYA ICO, resulting in over 30BTC collected
-          </span>
-          <div class="t-square"></div>
-        </div>
-      </div>
-      <div class="single-timeline d-flex-2">
-        <div class="timeline-blank"></div>
-        <div class="timeline-text d-flex-2">
-          <span>
-            <h6>December 2019 </h6>— The launch of AYA Pay
-          </span>
-          <div class="t-square"></div>
-        </div>
-      </div>
-      <!--SINGLE TIMELINE-->
-      <div class="single-timeline d-flex-2">
-        <div class="timeline-blank"></div>
-        <div class="timeline-text d-flex-2">
-          <span>
-            <h6>April 2020</h6> — The successful Hamedan Hardfork, supported by all AYA exchanges, aimed at integrating the dPoW algorithm, improving the security of the AYA blockchain.
-          </span>
-          <div class="t-square"></div>
-        </div>
-      </div>
-      <!--SINGLE TIMELINE-->
-      <div class="single-timeline d-flex-2">
-        <div class="timeline-blank"></div>
-        <div class="timeline-text d-flex-2">
-          <span>
-            <h6>June 2020</h6> — Aryna Exchange goes live, opening more trading opportunities globally
-          </span>
-          <div class="t-square"></div>
-        </div>
-      </div>
-      <!--SINGLE TIMELINE-->
-      <div class="single-timeline d-flex-2">
-        <div class="timeline-blank"></div>
-        <div class="timeline-text d-flex-2">
-          <span>
-            <h6>July 2020</h6> — The enabling of our Coin Exchanger
-          </span>
-          <div class="t-square"></div>
-        </div>
-      </div>
-      <!--SINGLE TIMELINE-->
-      <div class="single-timeline d-flex-2">
-        <div class="timeline-blank"></div>
-        <div class="timeline-text d-flex-2">
-          <span>
-            <h6>November 2020</h6> — The implementation of Smart Contracts into the Aryacoin Ecosystem
-          </span>
-          <div class="t-square"></div>
-        </div>
-      </div>
-      <!--SINGLE TIMELINE-->
-      <div class="single-timeline d-flex-2">
-        <div class="timeline-blank"></div>
-        <div class="timeline-text d-flex-2">
-          <span>
-            <h6>Q1 2021</h6> — Alef B goes live (more details coming soon)
-          </span>
-          <div class="t-square"></div>
-        </div>
-      </div>
-    </div>
-  </div>
+              <div class="all-timelines">
+                <!--SINGLE TIMELINE-->
+                <div class="single-timeline d-flex-2">
+                  <div class="timeline-blank"></div>
+                  <div class="timeline-text d-flex-2">
+                    <span>
+                      <h6>April 2019</h6>
+                      — The launch of Aryacoin; AYA ICO, resulting in over 30BTC
+                      collected
+                    </span>
+                    <div class="t-square"></div>
+                  </div>
+                </div>
+                <div class="single-timeline d-flex-2">
+                  <div class="timeline-blank"></div>
+                  <div class="timeline-text d-flex-2">
+                    <span>
+                      <h6>December 2019</h6>
+                      — The launch of AYA Pay
+                    </span>
+                    <div class="t-square"></div>
+                  </div>
+                </div>
+                <!--SINGLE TIMELINE-->
+                <div class="single-timeline d-flex-2">
+                  <div class="timeline-blank"></div>
+                  <div class="timeline-text d-flex-2">
+                    <span>
+                      <h6>April 2020</h6>
+                      — The successful Hamedan Hardfork, supported by all AYA
+                      exchanges, aimed at integrating the dPoW algorithm,
+                      improving the security of the AYA blockchain.
+                    </span>
+                    <div class="t-square"></div>
+                  </div>
+                </div>
+                <!--SINGLE TIMELINE-->
+                <div class="single-timeline d-flex-2">
+                  <div class="timeline-blank"></div>
+                  <div class="timeline-text d-flex-2">
+                    <span>
+                      <h6>June 2020</h6>
+                      — Aryna Exchange goes live, opening more trading
+                      opportunities globally
+                    </span>
+                    <div class="t-square"></div>
+                  </div>
+                </div>
+                <!--SINGLE TIMELINE-->
+                <div class="single-timeline d-flex-2">
+                  <div class="timeline-blank"></div>
+                  <div class="timeline-text d-flex-2">
+                    <span>
+                      <h6>July 2020</h6>
+                      — The enabling of our Coin Exchanger
+                    </span>
+                    <div class="t-square"></div>
+                  </div>
+                </div>
+                <!--SINGLE TIMELINE-->
+                <div class="single-timeline d-flex-2">
+                  <div class="timeline-blank"></div>
+                  <div class="timeline-text d-flex-2">
+                    <span>
+                      <h6>November 2020</h6>
+                      — The implementation of Smart Contracts into the Aryacoin
+                      Ecosystem
+                    </span>
+                    <div class="t-square"></div>
+                  </div>
+                </div>
+                <!--SINGLE TIMELINE-->
+                <div class="single-timeline d-flex-2">
+                  <div class="timeline-blank"></div>
+                  <div class="timeline-text d-flex-2">
+                    <span>
+                      <h6>Q1 2021</h6>
+                      — Alef B goes live (more details coming soon)
+                    </span>
+                    <div class="t-square"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </article>

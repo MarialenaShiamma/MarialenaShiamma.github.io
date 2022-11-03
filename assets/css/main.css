@@ -4264,7 +4264,7 @@ a:hover {
 }
 .item-list .item {
   position: relative;
-  line-height: 40px;
+  line-height: 16px;
   margin-bottom: 10px;
   text-align: left;
   display: block;
@@ -4274,7 +4274,7 @@ a:hover {
 .item-list .item:before {
   content: "";
   position: absolute;
-  top: 25px;
+  top: 8px;
   left: -10px;
   width: 12px;
   height: 1px;
@@ -4284,7 +4284,7 @@ a:hover {
   content: "";
   position: absolute;
   top: 0px;
-  left: -20px;
+  left: -12px;
   width: 5px;
   height: 8px;
   background: #fff;
@@ -4294,7 +4294,7 @@ a:hover {
   position: absolute;
   top: 9px;
   bottom: 0;
-  left: -20px;
+  left: -12px;
   width: 5px;
   background: #fff;
 }
@@ -4308,7 +4308,7 @@ a:hover {
 .item-list .item .item-label:before {
   content: "";
   position: absolute;
-  top: 15px;
+  top: 2px;
   left: -16px;
   width: 13px;
   height: 13px;
