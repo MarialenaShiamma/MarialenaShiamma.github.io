@@ -4,10 +4,8 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-$(document).ready(function() {
- 
+$(document).ready(function () {
   $(".owl-carousel").owlCarousel();
- 
 });
 
 (function ($) {
@@ -97,63 +95,58 @@ Array.from(document.querySelectorAll(".ImgThumbnail")).forEach((item) => {
   });
 });
 
-
 document.querySelector(".close").addEventListener("click", () => {
   modalEle.style.display = "none";
 });
 
+// Carousel item 4
+$(".carousel-item-4").owlCarousel({
+  //Basic Speeds
+  slideSpeed: 200,
+  paginationSpeed: 800,
+  smartSpeed: 1000,
 
- // Carousel item 4
- $(".carousel-item-4").owlCarousel({
-      //Basic Speeds
-      slideSpeed : 200,
-      paginationSpeed : 800,
-      smartSpeed: 1000,
-   
-      //Autoplay
-      autoPlay : true,
-      goToFirst : true,
-      goToFirstSpeed : 1000,
-   
-      // Navigation
-      navigation : true,
-      navigationText : ["prev","next"],
-      pagination : true,
-      paginationNumbers: true,
+  //Autoplay
+  autoPlay: true,
+  goToFirst: true,
+  goToFirstSpeed: 1000,
 
-      margin: 30,
-      dots: true,
-      loop: true,
-   
-      // Responsive
-      responsive: true,
-      items : 3,
-      itemsDesktop : [1199,3],
-      itemsDesktopSmall : [980,3],
-      itemsTablet: [768,2],
-      itemsMobile : [479,1],
+  // Navigation
+  navigation: true,
+  navigationText: ["prev", "next"],
+  pagination: true,
+  paginationNumbers: true,
 
-  
+  margin: 30,
+  dots: true,
+  loop: true,
+
+  // Responsive
+  responsive: true,
+  items: 3,
+  itemsDesktop: [1199, 3],
+  itemsDesktopSmall: [980, 3],
+  itemsTablet: [768, 2],
+  itemsMobile: [479, 1],
+
   responsive: {
-      0:{
-          items:1
-      },
-      576:{
-          items:1
-      },
-      768:{
-          items:2
-      },
-      992:{
-          items:3
-      },
-      1200:{
-          items:4
-      },
-      1500:{
-        items:5
-    }
-  }
+    0: {
+      items: 1,
+    },
+    576: {
+      items: 1,
+    },
+    768: {
+      items: 2,
+    },
+    992: {
+      items: 3,
+    },
+    1200: {
+      items: 4,
+    },
+    1500: {
+      items: 5,
+    },
+  },
 })(jQuery);
-
-

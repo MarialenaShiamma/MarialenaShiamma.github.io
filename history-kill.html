@@ -1,359 +1,29 @@
 <!DOCTYPE html>
 
 <html>
-  <style>
-    body {
-  background-color: #000;
-
-  overflow-x: hidden;
-}
-
-@font-face {
-  font-family: 'ESL Legend';
-  src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.eot);
-  src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.eot#iefix) format("embedded-opentype"),
-  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.woff2) format("woff2"),
-  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.woff) format("woff"),
-  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.ttf) format("truetype"),
-  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.svg#eicon) format("svg");
-  font-style: normal;
-  font-weight: 300;
-}
-@font-face {
-  font-family: 'ESL Legend';
-  src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.eot);
-  src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.eot#iefix) format("embedded-opentype"),
-  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.woff2) format("woff2"),
-  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.woff) format("woff"),
-  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.ttf) format("truetype"),
-  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.svg#eicon) format("svg");
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: 'ESL Legend';
-  src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.eot);
-  src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.eot#iefix) format("embedded-opentype"),
-  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.woff2) format("woff2"),
-  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.woff) format("woff"),
-  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.ttf) format("truetype"),
-  url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.svg#eicon) format("svg");
-  font-style: normal;
-  font-weight: bold;
-}
-
-img {
-  max-width: 100%;
-}
-
-.ag-format-container {
-  width: 1160px;
-  margin: 0 auto;
-
-  position: relative;
-}
-
-.ag-timeline-block {
-  padding: 5% 0;
-}
-.ag-timeline_title-box {
-  padding: 0 0 30px;
-
-  text-align: center;
-}
-.ag-timeline_tagline {
-  font-size: 40px;
-  color: rgb(84, 89, 95);
-}
-
-.ag-timeline_item {
-  margin: 0 0 50px;
-
-  position: relative;
-}
-.ag-timeline_item:nth-child(2n) {
-  text-align: right;
-}
-
-.ag-timeline {
-  display: inline-block;
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-
-  position: relative;
-}
-.ag-timeline_line {
-  width: 2px;
-  background-color: #393935;
-
-  position: absolute;
-  top: 2px;
-  left: 50%;
-  bottom: 0;
-
-  overflow: hidden;
-
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-.ag-timeline_line-progress {
-  width: 100%;
-  height: 20%;
-  background-color: rgba(230, 193, 120, 0.766);
-}
-
-.ag-timeline-card_box {
-  padding: 0 0 20px 50%;
-}
-.ag-timeline_item:nth-child(2n) .ag-timeline-card_box {
-  padding: 0 50% 20px 0;
-}
-.ag-timeline-card_point-box {
-  display: inline-block;
-  margin: 0 14px 0 -28px;
-}
-.ag-timeline_item:nth-child(2n) .ag-timeline-card_point-box {
-  margin: 0 -28px 0 14px;
-}
-.ag-timeline-card_point {
-  height: 50px;
-  line-height: 50px;
-  width: 50px;
-  border: 3px solid rgba(230, 193, 120, 0.766);
-  background-color: #1d1d1b;
-
-  text-align: center;
-  font-family: 'ESL Legend', sans-serif;
-  font-size: 20px;
-  color: #FFF;
-
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-}
-.js-ag-active .ag-timeline-card_point {
-  color: #1d1d1b;
-  background-color: rgba(230, 193, 120, 0.766);
-}
-.ag-timeline-card_meta-box {
-  display: inline-block;
-}
-.ag-timeline-card_meta {
-  margin: 10px 0 0;
-
-  font-family: 'ESL Legend', sans-serif;
-  font-weight: bold;
-  font-size: 28px;
-  color: rgba(230, 193, 120, 0.766);
-}
-.ag-timeline-card_item {
-  display: inline-block;
-  width: 45%;
-  margin: -77px 0 0;
-  border-color: black;
-  
-  background-color: black;
-
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-
-  -webkit-box-shadow: 0 0 0 0 rgba(0,0,0,.5);
-  -moz-box-shadow: 0 0 0 0 rgba(0,0,0,.5);
-  -o-box-shadow: 0 0 0 0 rgba(0,0,0,.5);
-  box-shadow: 0 0 0 0 rgba(0,0,0,.5);
-
-  -webkit-transition: -webkit-transform .5s, opacity .5s;
-  -moz-transition: -moz-transform .5s, opacity .5s;
-  -o-transition: -o-transform .5s, opacity .5s;
-  transition: transform .5s, opacity .5s;
-
-  position: relative;
-}
-.ag-timeline_item:nth-child(2n+1) .ag-timeline-card_item {
-  -webkit-transform: translateX(-200%);
-  -moz-transform: translateX(-200%);
-  -ms-transform: translateX(-200%);
-  -o-transform: translateX(-200%);
-  transform: translateX(-200%);
-}
-.ag-timeline_item:nth-child(2n) .ag-timeline-card_item {
-  -webkit-transform: translateX(200%);
-  -moz-transform: translateX(200%);
-  -ms-transform: translateX(200%);
-  -o-transform: translateX(200%);
-  transform: translateX(200%);
-}
-.js-ag-active.ag-timeline_item:nth-child(2n+1) .ag-timeline-card_item,
-.js-ag-active.ag-timeline_item:nth-child(2n) .ag-timeline-card_item {
-  opacity: 1;
-
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-  transform: translateX(0);
-}
-.ag-timeline-card_arrow {
-  height: 18px;
-  width: 18px;
-  margin-top: 20px;
-  background-color: #282828;
-
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  right: 0;
-
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-.ag-timeline_item:nth-child(2n+1) .ag-timeline-card_arrow {
-  margin-left: calc(-18px / 2);
-  margin-right: calc(-18px / 2);
-}
-.ag-timeline_item:nth-child(2n) .ag-timeline-card_arrow {
-  margin-left: -10px;
-
-  right: auto;
-  left: 0;
-}
-.ag-timeline-card_img {
-  width: 100%;
-}
-.ag-timeline-card_info {
-  padding: 20px 30px;
-}
-.ag-timeline-card_title {
-  display: none;
-  margin: 10px 0 0;
-
-  font-family: 'ESL Legend', sans-serif;
-  font-weight: bold;
-  font-size: 28px;
-  color: rgba(230, 193, 120, 0.766);
-}
-.ag-timeline-card_desc {
-  line-height: 1.45;
-
-  font-size: 18px;
-  color: #FFF;
-}
-
-
-@media only screen and (max-width: 979px) {
-  .ag-timeline_line {
-    left: 30px;
-  }
-
-  .ag-timeline_item:nth-child(2n) {
-    text-align: left;
-  }
-
-  .ag-timeline-card_box,
-  .ag-timeline_item:nth-child(2n) .ag-timeline-card_box {
-    padding: 0 0 20px;
-  }
-  .ag-timeline-card_meta-box {
-    display: none;
-  }
-  .ag-timeline-card_point-box,
-  .ag-timeline_item:nth-child(2n) .ag-timeline-card_point-box {
-    margin: 0 0 0 8px;
-  }
-  .ag-timeline-card_point {
-    height: 40px;
-    line-height: 40px;
-    width: 40px;
-  }
-  .ag-timeline-card_item {
-    width: auto;
-    margin: -65px 0 0 75px
-  }
-  .ag-timeline_item:nth-child(2n+1) .ag-timeline-card_item,
-  .ag-timeline_item:nth-child(2n) .ag-timeline-card_item {
-    -webkit-transform: translateX(200%);
-    -moz-transform: translateX(200%);
-    -ms-transform: translateX(200%);
-    -o-transform: translateX(200%);
-    transform: translateX(200%);
-  }
-  .ag-timeline_item:nth-child(2n+1) .ag-timeline-card_arrow {
-    right: auto;
-    left: 0;
-  }
-  .ag-timeline-card_title {
-    display: block;
-  }
-  .ag-timeline-card_arrow {
-    margin-top: 12px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .ag-format-container {
-    width: 96%;
-  }
-
-  .ag-timeline-card_img {
-    height: auto;
-    width: auto;
-  }
-}
-
-@media only screen and (max-width: 639px) {
-  .ag-timeline-card_info {
-    padding: 10px 15px;
-  }
-  .ag-timeline-card_desc {
-    font-size: 14px;
-  }
-}
-
-@media only screen and (max-width: 479px) {
-
-}
-
-@media (min-width: 768px) and (max-width: 979px) {
-  .ag-format-container {
-    width: 750px;
-  }
-
-}
-
-@media (min-width: 980px) and (max-width: 1161px) {
-  .ag-format-container {
-    width: 960px;
-  }
-
-}
-  </style>
   <head>
-    <title>Ιστορικό Δολοφονίας</title>
+    <title>4 ΗΡΩΕΣ 1974 - ΙΣΤΟΡΙΚΟ ΔΟΛΟΦΟΝΙΑΣ</title>
+
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, user-scalable=no"
     />
-    <link rel="icon" type="image/x-icon" href="assets/css/images/favicon.ico">
+
+    <link rel="icon" type="image/x-icon" href="assets/css/images/favicon.ico" />
     <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript
-      ><link rel="stylesheet" href="assets/css/noscript.css"
-    /></noscript>
+    <link rel="stylesheet" href="assets/css/timeline.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
@@ -361,6 +31,7 @@ img {
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body class="is-preload">
     <div id="navigationMenu"></div>
     <script>
@@ -374,214 +45,571 @@ img {
       <!-- Main -->
       <article id="main">
         <header>
-          <h2>ΙΣΤΟΡΙΚΟ ΔΟΛΟΦΟΝΙΑΣ</h2>
-          <p>Τι έγινε, πότε έγινε και που έγινε</p>
+          <h2>ΙΣΤΟΡΙΚH ΑΝΑΔΡΟΜH</h2>
+          <!-- <p>Τι έγινε, πότε έγινε και που έγινε</p> -->
         </header>
 
-        <section id="one" class="wrapper special">
-          <div class="inner">
-            <header class="major">
-              <h2>ΘΕΜΑ 1</h2>
-              <p>
-                Aliquam ut ex ut augue consectetur interdum. Donec amet
-                imperdiet eleifend<br />
-                fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus
-                ullamcorper.
-              </p>
-            </header>
-          </div>
-        </section>
-
-            <div class="ag-timeline-block">
-              <!-- <div class="ag-timeline_title-box">
-                <div class="ag-timeline_tagline">Timeline</div>
-              </div> -->
-              <section class="ag-section">
-                <div class="ag-format-container">
-                  <div class="js-timeline ag-timeline">
-                    <div class="js-timeline_line ag-timeline_line">
-                      <div class="js-timeline_line-progress ag-timeline_line-progress"></div>
+        <section class="special1">
+          <div class="ag-timeline-block">
+            <!-- <div class="ag-timeline_title-box">
+            <div class="ag-timeline_tagline">Timeline</div>
+            <div class="ag-timeline_title">No Flex</div>
+          </div> -->
+            <section class="ag-section" id="summary">
+              <div class="ag-format-container">
+                <div class="js-timeline ag-timeline">
+                  <div class="js-timeline_line ag-timeline_line">
+                    <div
+                      class="js-timeline_line-progress ag-timeline_line-progress"
+                    ></div>
+                  </div>
+                  <div class="ag-timeline_list">
+                    <div class="js-timeline_item ag-timeline_item">
+                      <div class="ag-timeline-card_box">
+                        <div
+                          class="js-timeline-card_point-box ag-timeline-card_point-box"
+                        >
+                          <div class="ag-timeline-card_point"></div>
+                        </div>
+                        <div class="ag-timeline-card_meta-box">
+                          <div class="ag-timeline-card_meta">
+                            Η διαφυγή του ΑΜ από το προεδρικό και πρώτος σταθμός
+                            στο χωριό Κλήρου
+                          </div>
+                        </div>
+                      </div>
+                      <div class="ag-timeline-card_item">
+                        <div class="ag-timeline-card_inner">
+                          <!-- <div class="ag-timeline-card_img-box">
+                          <img
+                            src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-13.png"
+                            class="ag-timeline-card_img"
+                            width="640"
+                            height="360"
+                          />
+                        </div> -->
+                          <div class="ag-timeline-card_info">
+                            <div class="ag-timeline-card_title">
+                              Η διαφυγή του ΑΜ από το προεδρικό και πρώτος
+                              σταθμός στο χωριό Κλήρου
+                            </div>
+                            <div class="ag-timeline-card_desc">
+                              Στις 15 Ιουλίου 1974 εκδηλώνεται το πραξικόπημα
+                              από τη Χούντα τον Αθηνών και τους Ελληνοκύπριους
+                              υποστηρικτές τους την ΕΟΚΑ Β, που είχε σαν στόχο
+                              την ανατροπή του ΑΜ. ‘Όταν οι πραξικοπηματίες
+                              μπήκαν στο προεδρικό , οι υπεύθυνοι ασφαλείας του
+                              ΑΜ αποφάσισαν να τον φυγαδεύσουν με σκοπό να τον
+                              μεταφέρουν προς το Μοναστήρι του Κύκκου με τελικό
+                              προορισμό την Πάφο. Η διαφυγή του ΑΜ από το
+                              Προεδρικό έγινε μέσω μίας βοηθητικής εξόδου προς
+                              τον ποταμό Πεδιαίο και την οδό Προδρόμου, όπου
+                              επιβιβάστηκαν σε διερχόμενο αυτοκίνητο πολίτη. Η
+                              μεγάλη πορεία διαφυγής ξεκίνησε με πρώτο ενδιάμεσο
+                              σταθμό το χωριό Κλήρου, στο σπίτι του αξιωματικού
+                              αστυνομίας Νεοκλή Μαλέκου όπου τους κέρασε ένα
+                              γρήγορο καφέ και τους έδωσε το δικό του αυτοκίνητο
+                              το οποίο ήταν σαλούν για να μπορούν να ταξιδέψουν
+                              στο Μοναστήρι του Κύκκου. Τότε ο Γεώργιος Βρούντος
+                              (αστυνομικός της Προεδρικής Φρουράς) ισχυρίστηκε
+                              ότι ήταν κτυπημένος από την ώρα που έβγαιναν από
+                              το Προεδρικό και ο αξιωματικός της Προεδρικής
+                              Φρουράς του είπε να μένει πίσω και να επισκεφτεί
+                              το γιατρό του χωριού. Ο Μακάριος άκουσε την
+                              συνομιλία και του είπε να μείνει ακόμα ένας
+                              αστυνομικός μαζί του και έτσι έμεινε ο Χριστάκης
+                              Κόμπος. Ο ΧΚ συνόδευσε τον Γεώργιο Βρούντο στον
+                              ιατρείο του χωριού όπου μια νοσοκόμα που ήταν
+                              καθήκον τον εξέτασε και του έδωσε παυσίπονα. Όταν
+                              τελείωσαν, πήραν το δρόμο για να γυρίσουν πίσω
+                              στην οικία του Νεοκλή Μαλέκου. Εκεί κοντά υπήρχε
+                              ένας φούρνος και μπήκαν μέσα για να φάνε κάτι. Ο
+                              ιδιοκτήτης του φούρνου τους είπε να μείνουν εκεί
+                              στον φούρνο για ασφάλεια. Ταυτόχρονα ζήτησαν ρούχα
+                              και παπούτσια για να αλλάξουν τις στολές τους,
+                              πράγμα που έγινε με την βοήθεια των γειτόνων.
+                              Καθώς ήταν μέσα στον φούρνο τους εντόπισαν οι
+                              εοκαβητατζίδες και τους ζήτησαν να παραδοθούν.
+                              Παραδόθηκαν και παράδωσαν το όπλο που είχε στην
+                              κατοχή του ο Χριστάκης Κόμπος. Ο Βρούντος κρατούσε
+                              ένα πιστόλι και το έβαλε μέσα σε ένα σακί από
+                              αλεύρι και έτσι δεν το βρήκαν. Οι εοκαβητατζίδες
+                              αφού πήραν το όπλο το ΧΚ τους είπαν να παραμείνουν
+                              εκεί μέχρι να επιστρέψουν ξανά.
+                            </div>
+                          </div>
+                        </div>
+                        <!-- <div class="ag-timeline-card_arrow"></div> -->
+                      </div>
                     </div>
-                    <div class="ag-timeline_list">
-                      <div class="js-timeline_item ag-timeline_item">
-                        <div class="ag-timeline-card_box">
-                          <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                            <div class="ag-timeline-card_point">2021</div>
-                          </div>
-                          <div class="ag-timeline-card_meta-box">
-                            <div class="ag-timeline-card_meta">Season 13</div>
+
+                    <div class="js-timeline_item ag-timeline_item">
+                      <div class="ag-timeline-card_box">
+                        <div class="ag-timeline-card_meta-box">
+                          <div class="ag-timeline-card_meta">
+                            Η μετάβαση των δύο αστυνομικών από την Κλήρου στο
+                            χωριό Φικάρδου
                           </div>
                         </div>
-                        <div class="ag-timeline-card_item">
-                          <div class="ag-timeline-card_inner">
-                            <div class="ag-timeline-card_info">
-                              <div class="ag-timeline-card_title">Season 13</div>
-                              <div class="ag-timeline-card_desc">
-                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
-                                eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
-                                montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-                                pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-                                vel, aliquet nec, vulputate eget, arcu.
-                              </div>
-                            </div>
-                          </div>
-                          <div class="ag-timeline-card_arrow"></div>
+                        <div
+                          class="js-timeline-card_point-box ag-timeline-card_point-box"
+                        >
+                          <div class="ag-timeline-card_point"></div>
                         </div>
                       </div>
-            
-                      <div class="js-timeline_item ag-timeline_item">
-                        <div class="ag-timeline-card_box">
-                          <div class="ag-timeline-card_meta-box">
-                            <div class="ag-timeline-card_meta">Season 12</div>
-                          </div>
-                          <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                            <div class="ag-timeline-card_point">2020</div>
+                      <div class="ag-timeline-card_item">
+                        <div class="ag-timeline-card_inner">
+                          <!-- <div class="ag-timeline-card_img-box">
+                          <img
+                            src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-12.png"
+                            class="ag-timeline-card_img"
+                            width="640"
+                            height="360"
+                            alt=""
+                          />
+                        </div> -->
+                          <div class="ag-timeline-card_info">
+                            <div class="ag-timeline-card_title">
+                              Η μετάβαση των δύο αστυνομικών από την Κλήρου στο
+                              χωριό Φικάρδου
+                            </div>
+                            <div class="ag-timeline-card_desc">
+                              (1)Λόγω της επικίνδυνης κατάστασης που επικρατούσε
+                              στο χωριό Κλήρου, ένας γείτονας τους είπε ότι θα
+                              ήταν πιο ασφαλείς στο χωριό Φικάρδου το οποίο
+                              απείχε 8 χιλιόμετρα. Λίγο αργότερα τους πήρε με το
+                              αυτοκίνητο του και τους μετέφερε στο χωριό
+                              Φικάρδου. Ο αγροφύλακας του χωριού Γιαννακός
+                              Δημητρίου τους άνοιξε το σχολείου του χωριού για
+                              να πέρασαν τη νύκτα τους . (2)Στην συνέχεια,
+                              φοβούμενοι από την όλη κατάσταση, ζήτησαν μέσο για
+                              να μεταφερθούν στην Λεμεσό, αλλά μετά από συζήτηση
+                              με άτομα της περιοχής κατέληξαν ότι το πιο ασφαλές
+                              ήταν να μεταφερθούν αρχικά στο χωριό Φικάρδου το
+                              οποίο απέχει 8 χιλιόμετρα από την Κλήρου. Την
+                              μεταφορά των δύο στο Φικάρδου την έκανε ο Κυριάκος
+                              Τυρίμος κάτοικος της περιοχής. Στις 16 Ιουλίου
+                              1974 το πρωί αφού προγευμάτισαν στο σπίτι του
+                              Γιαννακού ζήτησαν μεταφορικό μέσο για να μεταβούν
+                              στη Λεμεσό. Τότε ο ΑΧ, που έμενε στο διπλανό σπίτι
+                              προσφέρθηκε να βοηθήσει, όμως ο ίδιος δεν είχε
+                              αυτοκίνητο. Πήρε την μηχανή του και πήγε στο
+                              διπλανό χωριό, τον Λαζανιά , όπου διέμενε ο
+                              αδερφός του ΧΧ μαζί με την αρραβωνιαστικιά του,
+                              και ο φίλος τους ΠΧ. Μετά από συζήτηση που είχαν
+                              μεταξύ τους συμφώνησαν να πάρουν το ρίσκο και να
+                              βοηθήσουν, χρησιμοποιώντας το αυτοκίνητο του ΧΧ,
+                              ένα Moskvitch με αριθμούς DG897 χρώματος μπλέ. Ο
+                              ΑΧ γύρισε στο Φικάρδου με την μηχανή του και οι
+                              άλλοι δύο με το αυτοκίνητο με το οποίο θα πήγαιναν
+                              στην Λεμεσό.
+                            </div>
                           </div>
                         </div>
-                        <div class="ag-timeline-card_item">
-                          <div class="ag-timeline-card_inner">
-                            <div class="ag-timeline-card_img-box">
-                              <img src="/images/tafos/tafos.jpg" class="ag-timeline-card_img" width="640" height="360" alt="" />
-                            </div>
-                            <div class="ag-timeline-card_info">
-                              <div class="ag-timeline-card_title">Season 12</div>
-                              <div class="ag-timeline-card_desc">
-                                Donec pede justo, fringilla
-                                vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                                venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-                                tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
-                                tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                                Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-                                nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
-                              </div>
-                            </div>
+                        <!-- <div class="ag-timeline-card_arrow"></div> -->
+                      </div>
+                    </div>
+
+                    <div class="js-timeline_item ag-timeline_item">
+                      <div class="ag-timeline-card_box">
+                        <div
+                          class="js-timeline-card_point-box ag-timeline-card_point-box"
+                        >
+                          <div class="ag-timeline-card_point"></div>
+                        </div>
+                        <div class="ag-timeline-card_meta-box">
+                          <div class="ag-timeline-card_meta">
+                            Η διαδρομή από Φικάρδου προς Λεμεσό
                           </div>
-                          <div class="ag-timeline-card_arrow"></div>
                         </div>
                       </div>
-            
-                      <div class="js-timeline_item ag-timeline_item">
-                        <div class="ag-timeline-card_box">
-                          <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                            <div class="ag-timeline-card_point">2020</div>
-                          </div>
-                          <div class="ag-timeline-card_meta-box">
-                            <div class="ag-timeline-card_meta">Season 11</div>
-                          </div>
-                        </div>
-                        <div class="ag-timeline-card_item">
-                          <div class="ag-timeline-card_inner">
-                            <div class="ag-timeline-card_info">
-                              <div class="ag-timeline-card_title">Season 11</div>
-                              <div class="ag-timeline-card_desc">
-                                Aenean imperdiet. Etiam ultricies
-                                nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
-                                Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
-                                adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
-                                hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae
-                                sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget
-                                eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.
-                              </div>
+                      <div class="ag-timeline-card_item">
+                        <div class="ag-timeline-card_inner">
+                          <!--  <div class="ag-timeline-card_img-box">
+                          <img
+                            src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-1.png"
+                            class="ag-timeline-card_img"
+                            width="640"
+                            height="360"
+                          /> 
+                        </div> -->
+                          <div class="ag-timeline-card_info">
+                            <div class="ag-timeline-card_title">
+                              Η διαδρομή από Φικάρδου προς Λεμεσό
+                            </div>
+                            <div class="ag-timeline-card_desc">
+                              Αμέσως μετά επιβιβάστηκαν και οι πέντε στο
+                              αυτοκίνητο με προορισμό την Λεμεσό με πρώτο
+                              ενδιάμεσο χωριό το Γούρρι. Έξω από το χωριό Γούρι
+                              κατέβηκαν οι τέσσερις και έμεινε στο αυτοκίνητο ο
+                              οδηγός του ο Χαράλαμπος Χριστοφή γιατί στο Γούρι
+                              υπήρχαν εοκαβιτατζίδες και διέτρεχαν κίνδυνο. Ο
+                              οδηγός προχώρησε και μπήκε στο χωριό, σταμάτησε
+                              αγόρασε τσιγάρα και ακολούθως πήρε το δρόμο για
+                              τον Φαρμακά. Οι άλλοι τέσσερις συνέχισαν με τα
+                              πόδια πίσω από το βουνό για να παρακάμψουν το
+                              Γούρι και συνάντησαν τον Χαράλαμπο Χριστοφή στο
+                              δίστρατο του Φαρμακά. Επιβιβάστηκαν ξανά στο
+                              αυτοκίνητο και συνέχισαν προς Λεμεσό μέσω Φαρμακά
+                              και έφτασαν στην Οδού όπου πέρασαν ανενόχλητοι.
+                              Όταν έφτασαν στα σύνορα της Παρεκλησσιάς -
+                              Εφταγώνιας ο Γεώργος Βρούντος είδε την ταμπέλα
+                              Παρεκκλησιάς και γνωρίζοντας ότι υπήρχαν πολλοί
+                              εοκαβιτατζίδες στην περιοχή, τους είπε να μην
+                              περάσουν από την Παρεκκλησιά και να πάνε από άλλο
+                              δρόμο. Δεν συμφώνησαν και τελικά κατέβηκαν προς το
+                              δρόμο της Λεμεσού – Λευκωσίας μέσω της
+                              Παρεκκλησιάς. Στο σταυροδρόμι Παρεκκλησιάς-
+                              Λευκωσίας- Λεμεσού υπήρχε μπλόκο των
+                              εοκαβιτατζίδων - περίπου είκοσι άτομα. Μην
+                              μπορώντας να το αποφύγουν οι δύο αστυνομικοί, ο
+                              Χριστάκης Κόμπος και Γεώργιος Βρούντος εισηγήθηκαν
+                              να τους πούνε ότι θα πάνε στο στρατόπεδο στα
+                              Πολεμίδια για να παρουσιαστούν στη μονάδα τους.
                             </div>
                           </div>
-                          <div class="ag-timeline-card_arrow"></div>
+                        </div>
+                        <!-- <div class="ag-timeline-card_arrow"></div> -->
+                      </div>
+                    </div>
+
+                    <div class="js-timeline_item ag-timeline_item">
+                      <div class="ag-timeline-card_box">
+                        <div class="ag-timeline-card_meta-box">
+                          <div class="ag-timeline-card_meta">
+                            Το μπλόκο στην Παρεκκλησιά
+                          </div>
+                        </div>
+                        <div
+                          class="js-timeline-card_point-box ag-timeline-card_point-box"
+                        >
+                          <div class="ag-timeline-card_point"></div>
                         </div>
                       </div>
-            
-                      <div class="js-timeline_item ag-timeline_item">
-                        <div class="ag-timeline-card_box">
-                          <div class="ag-timeline-card_meta-box">
-                            <div class="ag-timeline-card_meta">Season 10</div>
-                          </div>
-                          <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                            <div class="ag-timeline-card_point">2019</div>
-                          </div>
-                        </div>
-                        <div class="ag-timeline-card_item">
-                          <div class="ag-timeline-card_inner">
-                            <div class="ag-timeline-card_info">
-                              <div class="ag-timeline-card_title">Season 10</div>
-                              <div class="ag-timeline-card_desc">
-                                Cum sociis natoque penatibus et magnis dis parturient
-                                montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-                                pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-                                vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                                venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-                                tincidunt. Cras dapibus. Vivamus elementum semper nisi.
-                              </div>
+                      <div class="ag-timeline-card_item">
+                        <div class="ag-timeline-card_inner">
+                          <!-- <div class="ag-timeline-card_img-box">
+                          <img
+                            src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-12.png"
+                            class="ag-timeline-card_img"
+                            width="640"
+                            height="360"
+                            alt=""
+                          />
+                        </div> -->
+                          <div class="ag-timeline-card_info">
+                            <div class="ag-timeline-card_title">
+                              Το μπλόκο στην Παρεκκλησιά
+                            </div>
+                            <div class="ag-timeline-card_desc">
+                              Έφθασαν κοντά τους, τους κατέβασαν, ερεύνησαν το
+                              αυτοκίνητο και τους πήραν κάτω από μια τερατσιά
+                              φρουρούμενους μέχρι να φτάσει ο αυτοδιορισθείσας
+                              Διοικητής, ο οποίος ήταν ο καταζητούμενος Αντρέας
+                              Πουρής από την Παρεκκλησιά, για να αποφασίσει τι
+                              θα κάνουν μαζί τους. Εκείνη την ώρα περνούσε ο
+                              πραξικοπηματίας Αντρέας Νεοκλέους δικηγόρος, ο
+                              οποίος πήγαινε να ορκιστεί Υπουργός Γεωργίας στην
+                              Κυβέρνηση του Νίκου Σαμψών. Όταν κατάλαβαν ποιος
+                              ήταν, γνωρίζοντας ότι θα ορκιζόταν Υπουργός της
+                              πραξικοπηματικής Κυβέρνησης άρχισαν να πυροβολούν
+                              στον αέρα και φωνάζουν «Ζήτω κύριε Νεοκλέους». Ο
+                              Γιώργιος Βρούντος όταν άκουσε το όνομα του άρχισε
+                              να τον καλεί γιατί τον ήξερε προσωπικά, αφού ήταν
+                              ο δικηγόρος της οικογένειας του αδελφού του ο
+                              οποίος σκοτώθηκε σε αυτοκινητιστικό δυστύχημα. Ο
+                              Αντρέας Νεοκλέους τον άκουσε και είπε στους
+                              εοκαβιτατζίδες να τον φέρουν κοντά του.
+                              Συνομίλησαν και ο Γεώργιος Βρούντος του είπε ποιος
+                              ήταν και του ανάφερε ότι ήταν στην Προεδρική
+                              φρουρά που συνόδευε τον Μακάριο μέχρι την Κλήρου.
+                              Επίσης του είπε ότι ήθελε να μεταβεί στο
+                              στρατόπεδο των Πολεμιδιών για να συναντήσει το
+                              Διοικητή Αντρέα Νεοφύτου ( ο οποίος ήταν ξάδελφος
+                              του Γ.Βρούντου) γιατί είχε σημαντικές πληροφορίες
+                              να του αναφέρει για τον Μακάριο. Μετά τα λεγόμενα
+                              του Γ.Βρούντου οι εοκαβητατζίδες αντιλήφθηκαν ότι
+                              τους είπαν ψέματα – ότι δηλαδή θα πήγαιναν να
+                              παρουσιαστούν στη μονάδα τους στα Πολεμίδια. Τότε
+                              έγιναν σκυλιά και άρχισαν να τους κτυπούν και να
+                              τους βρίζουν.
                             </div>
                           </div>
-                          <div class="ag-timeline-card_arrow"></div>
+                        </div>
+                        <!-- <div class="ag-timeline-card_arrow"></div> -->
+                      </div>
+                    </div>
+
+                    <div class="js-timeline_item ag-timeline_item">
+                      <div class="ag-timeline-card_box">
+                        <div
+                          class="js-timeline-card_point-box ag-timeline-card_point-box"
+                        >
+                          <div class="ag-timeline-card_point"></div>
+                        </div>
+                        <div class="ag-timeline-card_meta-box">
+                          <div class="ag-timeline-card_meta">
+                            Η απομάκρυνση του Βρούντου από το μπλόκο
+                          </div>
                         </div>
                       </div>
-            
-                      <div class="js-timeline_item ag-timeline_item">
-                        <div class="ag-timeline-card_box">
-                          <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                            <div class="ag-timeline-card_point">2019</div>
-                          </div>
-                          <div class="ag-timeline-card_meta-box">
-                            <div class="ag-timeline-card_meta">Season 9</div>
+                      <div class="ag-timeline-card_item">
+                        <div class="ag-timeline-card_inner">
+                          <!--  <div class="ag-timeline-card_img-box">
+                          <img
+                            src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-1.png"
+                            class="ag-timeline-card_img"
+                            width="640"
+                            height="360"
+                          /> 
+                        </div> -->
+                          <div class="ag-timeline-card_info">
+                            <div class="ag-timeline-card_title">
+                              Η απομάκρυνση του Βρούντου από το μπλόκο
+                            </div>
+                            <div class="ag-timeline-card_desc">
+                              Τον Γεώργιο Βρούντο τον έβαλαν στο αυτοκίνητο του
+                              Χαράλαμπου Χριστοφή για να οδηγήσει συνοδευόμενος
+                              από ένα οπλοφόρο και να μεταβούν στο στρατόπεδο
+                              των Πολεμιδιών. Εκεί ο Γεώργιος Βρούντος συνάντησε
+                              τον Διοικητή Νεοφύτου και του μετάφερε τις
+                              πληροφορίες που ισχυριζόταν ότι ήξερε και ήταν
+                              σημαντικές για τον Μακάριο. Στην επιστροφή πέρασαν
+                              από τον αστυνομικό σταθμό της Γερμασόγειας και
+                              εκεί τους κράτησαν για να μην πάνε πίσω στο
+                              σταυροδρόμι Παρεκκλησιάς – Λεμεσού- Λευκωσίας
+                              διότι ακούγονταν ριπές από όπλα στο δρόμο. Έμειναν
+                              εκεί μέχρι τις 4μμ. Στον αστυνομικό σταθμό ένας
+                              από τους παραβρισκόμενους πραξικοπηματίες ήταν ο
+                              Ντίνος Τσιρίδης ο οποίος ήταν δικηγόρος. Ο
+                              Γεώργιος Βρούντος του ζήτησε να τον πάρει πίσω στο
+                              σταυροδρόμι Παρεκκλησίας – Λευκωσίας – Λεμεσού
+                              γιατί είχε ακόμα 4 άτομα και υπήρχε ο κίνδυνος να
+                              τους σκοτώσουν. Ο δικηγόρος Τσιρίδης συνοδευόμενος
+                              από έναν οπλοφόρο, πήραν τον Γεώργιο Βρούντο πίσω
+                              στο μπλόκο. Όταν έφθασαν εκεί, ο αυτοδιοριζόμενος
+                              διοικητής Αντρέας Πουρής είπε στους άλλους
+                              ευρισκόμενους εοκαβιτατζίδες «εν τούτος που μας
+                              έφυε»; Και τον τράβηξε να τον βάλει στο αυτοκίνητο
+                              του. Ο Τσιρίδης αντέδρασε και επέμενε να τον πάρει
+                              πίσω στον αστυνομικό σταθμό Γερμασόγειας, διότι
+                              τον είδα περίπου 50 άτομα να φεύγει μαζί του και
+                              ανησυχούσε ότι θα τον κατηγορούσαν για φόνο,
+                              ενδεικτικά ανάφερε στον Αντρέα Πουρή «θα μας τον
+                              φορτώσεις τζαι τούτον;» γνωρίζοντας ότι ο Αντρέας
+                              Πουρής θα τον σκότωνε. Έτσι και έγινε, ο Τσιρίδης
+                              πήρε τον Γεώργιο Βρούντο πίσω στον αστυνομικό
+                              σταθμό στη Γερμασόγεια. Εντωμεταξύ
+                              αντιλαμβανόμενος τον κίνδυνο ο Γεώργιος Βρούντος
+                              βρήκε τρόπο και μετέβηκε από τον σταθμό της
+                              Γερμασόγειας στον κεντρικό αστυνομικό σταθμό
+                              Λεμεσού. Μετά από μια βδομάδα ο Γεώργιος Βρούντος
+                              μετέβηκε στο χωριό Φικάρδου για να πάρει το
+                              πιστόλι που άφησε στην σύζυγο του Γιαννακού
+                              Δημητρίου, Ρεβέκκα για να το φυλάξει. Για ασφάλεια
+                              η Ρεβέκκα το έθαψε για να μην το βρει κανένας.
+                              Όταν μετέβηκε εκεί του το έδωσε και τον ρώτησε το
+                              όνομα του και που ήταν οι υπόλοιποι που μετέβαιναν
+                              στο αυτοκίνητο μαζί του. Απάντησε ότι πήγαν με
+                              λεωφορείο στη Λευκωσία και δεν ήξερε που ήταν.
+                              Όταν έμαθα για την εξαφάνιση των αδελφών μου,
+                              προσπάθησα να βρω πληροφορίες για τα άτομα που
+                              ήταν μαζί τους και η θεία μου Ρεβέκκα μου ανάφερε
+                              το όνομα του Γεώργιου Βρούντου.
+                            </div>
                           </div>
                         </div>
-                        <div class="ag-timeline-card_item">
-                          <div class="ag-timeline-card_inner">
-                            <div class="ag-timeline-card_img-box">
-                              <img src="/images/tafos/ektafi.jpg" class="ag-timeline-card_img" width="640" height="360" alt="" />
-                            </div>
-                            <div class="ag-timeline-card_info">
-                              <div class="ag-timeline-card_title">Season 9</div>
-                              <div class="ag-timeline-card_desc">
-                                Vivamus elementum semper nisi. Aenean vulputate eleifend
-                                tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
-                                Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
-                                nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies
-                                nisi vel augue. Curabitur ullamcorper ultricies nisi.
-                              </div>
-                            </div>
+                        <!-- <div class="ag-timeline-card_arrow"></div> -->
+                      </div>
+                    </div>
+
+                    <div class="js-timeline_item ag-timeline_item">
+                      <div class="ag-timeline-card_box">
+                        <div class="ag-timeline-card_meta-box">
+                          <div class="ag-timeline-card_meta">
+                            Η αναζήτηση του Αναστάση και του Χαλάραμπου
                           </div>
-                          <div class="ag-timeline-card_arrow"></div>
+                        </div>
+                        <div
+                          class="js-timeline-card_point-box ag-timeline-card_point-box"
+                        >
+                          <div class="ag-timeline-card_point"></div>
                         </div>
                       </div>
-            
-                      <div class="js-timeline_item ag-timeline_item">
-                        <div class="ag-timeline-card_box">
-                          <div class="ag-timeline-card_meta-box">
-                            <div class="ag-timeline-card_meta">Season 8</div>
-                          </div>
-                          <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                            <div class="ag-timeline-card_point">2018</div>
+                      <div class="ag-timeline-card_item">
+                        <div class="ag-timeline-card_inner">
+                          <!-- <div class="ag-timeline-card_img-box">
+                          <img
+                            src="https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/img-12.png"
+                            class="ag-timeline-card_img"
+                            width="640"
+                            height="360"
+                            alt=""
+                          />
+                        </div> -->
+                          <div class="ag-timeline-card_info">
+                            <div class="ag-timeline-card_title">
+                              Η αναζήτηση του Αναστάση και του Χαλάραμπου
+                            </div>
+                            <div class="ag-timeline-card_desc">
+                              Έτσι άρχισα τις έρευνες πηγαίνοντας στους
+                              κεντρικούς αστυνομικούς σταθμούς των πόλεων
+                              Λευκωσίας, Λεμεσού και Πάφου για να εντοπίσω τα
+                              αδέλφια μου και τον Γεώργιο Βρούντο. Στις 21/7/74
+                              μετέβηκα στην κεντρικό αστυνομικό σταθμό Πάφου και
+                              ρώτησα αν πέρασαν από τον σταθμό. Στο κεντρικό
+                              αστυνομικό σταθμό Πάφου με πληροφόρησαν ότι δεν
+                              πέρασαν από εκεί γιατί δεν υπήρχαν τα ονόματα τους
+                              μέσα στις λίστες τους. Για αυτό με έστειλαν στον
+                              αστυνομικό σταθμό της Παναγιάς όπου υπήρχαν
+                              πληροφορίες ότι στα βουνά υπήρχαν αντιστασιακοί.
+                              Εκεί συνάντησα ένα αξιωματικό της αστυνομίας με
+                              πολιτική περιβολή, τον οποίο ρωτούσα επανειλημμένα
+                              να μου δώσει πληροφόρηση και μου απαντούσε
+                              αργότερα- αργότερα. Κοντά στο μεσημέρι με φώναξε
+                              και μπήκαμε στο αστυνομικό αυτοκίνητο τύπου Land
+                              Rover και κατευθυνθήκαμε από χωματόδρομο έξω από
+                              το χωριό Παναγιά - περίπου ένα χιλιόμετρο μακριά -
+                              όπου σταμάτησε σε συγκεκριμένο σημείο. Κατέβηκε
+                              από το αυτοκίνητο και ξέθαψε από κρυψώνα που ήταν
+                              κάτω από πέτρες ένα ρολό με κόλλες. Ήταν οι λίστες
+                              των αντιστασιακών που βρίσκονταν στην ορεινή
+                              περιοχή Παναγιάς. Μου τις έδωσε και μου είπε να
+                              ψάξω τα ονόματα στις λίστες. Τις διάβασα τρείς
+                              φορές αλλά δεν βρήκα τα ονόματα των αδελφών μου
+                              και των υπολοίπων που χάθηκαν. Τις τοποθέτησε πίσω
+                              στην κρυψώνα και φύγαμε.. Την επόμενη μέρα πήγα
+                              στον αστυνομικό σταθμό Γερμασόγειας. Εκεί είχε ένα
+                              άτομο με πολιτική περιβολή ο οποίος με ρώτησε τί
+                              θέλω. Του εξήγησα ποιους γυρεύω και έδωσα και τα
+                              νούμερα του αυτοκινήτου του Χαράλαμπου Χριστοφή.
+                              Τότε αγρίεψε και προσπάθησε να με διώξει από τον
+                              σταθμό και να μην ξαναπάω. Το συγκεκριμένο άτομο
+                              στεκόταν πίσω από ένα ψηλό πάγκο - γραφείο της
+                              αστυνομίας και προσποιήθηκα ότι θα του δείξω την
+                              ταυτότητα μου. Όταν έσκυψε να τη δει τον πήρα από
+                              τον λαιμό και προσπάθησα να τον βγάλω έξω από τον
+                              πάγκο. Φώναζε έβριζε και με απειλούσε ότι θα με
+                              κανονίσει. Ακούοντας τις φωνές βγήκε από ένα
+                              γραφείο ένας ένστολος λοχίας και μας χώρισε. Τότε
+                              το συγκεκριμένο άτομο με την πολιτική περιβολή με
+                              απείλησε κρατώντας ένα καλασνίκοφ και με διέταξε
+                              μπροστά στον ένστολο λοχία να μπω στο κελί. Το
+                              έκανα. Μπήκα, κάθισα και περίμενα. Αυτός
+                              πηγαινοερχόταν και με φοβέριζε και κατά η ώρα
+                              τρείς το απόγευμα έφυγε για φαγητό. Τότε ο
+                              ένστολος λοχίας μου άνοιξε και μου είπε να φύγω
+                              και μην ξαναέλθω ώσπου να δούμε τί θα γίνει. Στον
+                              σταθμό ξαναπήγα μετά από 2 μήνες και ζήτησα να
+                              μάθω αν υπήρχε κανένα αυτοκίνητο με τα νούμερα
+                              Moskvitch με αριθμό εγγραφής DG897. Με ρώτησαν
+                              ποιος είμαι και όταν τους είπα με οδήγησαν πίσω
+                              από τον σταθμό και μου έδειξαν το αυτοκίνητο. Μου
+                              έφεραν τα κλειδιά αλλά δεν είχε βενζίνη και η
+                              μπαταρία ήταν άδεια. Έφυγα και τους είπα ότι θα
+                              ξανάρθω για να φέρω ακόμα ένα άτομο μαζί μου για
+                              να το πάρουμε στο χωριό. Έτσι και έγινε, το
+                              μετάφερα στο χωρίο Καπέδες και μετά στο Φικάρδου.
+                              Τον Γεώργιο Βρούντο τον συνάντησα οκτώ μέρες μετά
+                              το πραξικόπημα στον κεντρικό Αστυνομικό σταθμό
+                              Λεμεσού. Εκεί τον φώναξαν από το μεγάφωνο και ήρθε
+                              κοντά μου μετά από μισή ώρα οπλοφορώντας.
+                              Ακούμπησε στο κάγκελο της βεράντας και τον ρώτησα
+                              τρείς φορές που είναι οι υπόλοιποι επιβαίνοντες
+                              στο αυτοκίνητο προς Λεμεσό και μου απάντησε ότι
+                              πήγαν με λεωφορείο στη Λευκωσία και δεν ήξερε
+                              περισσότερα. Κατάλαβα ότι έλεγε ψέματα και ότι
+                              κάτι άλλο συνέβαινε και θύμωσα. Του επιτέθηκα και
+                              τον έπιασα από την πλευρά που είχε το πιστόλι για
+                              να απομονώσω στο χέρι του για να μην
+                              χρησιμοποιήσει το πιστόλι του και τον έσπρωξα στο
+                              κενό. Επενέβησαν αρκετοί αστυνομικοί για να
+                              σταματήσουν την εμπλοκή. Τον φυγάδευσαν και με
+                              έδιωξαν και εμένα. Στις 3 Αυγούστου 1974 ήμουν στο
+                              Φικάρδου και τηλεφώνησαν από την αστυνομία Κλήρου
+                              ότι υπήρχαν τέσσερα άτομα νεκρά στη Λεμεσό και να
+                              πάμε προς αναγνώριση. Την επομένη μέρα μεταβήκαμε
+                              με τον κουμπάρο μου Κύπρο Αλεξανδράκη και τον
+                              πατέρα του Παντελάκη Χαραλάμπους στον κεντρικό
+                              αστυνομικό σταθμό Λεμεσού. Εκεί συναντήσαμε και
+                              δύο άτομα της οικογένειας Κόμπου και επειδή ήξεραν
+                              ότι στην περιοχή Άγιου Τύχωνα – Αρμενοχώρι-
+                              Παρεκκλησιάς υπήρχαν εοκαβιτατζίδες ζήτησαν να
+                              υπάρχει αστυνομική προστασία στην περιοχή. Και
+                              έτσι και έγινε. Μαζί μας πήγαν και άνθρωποι του
+                              υγειονομείου διότι έκαναν πρωτύτερα αναγνώριση και
+                              είδαν ότι τα τέσσερα άτομα ήταν σε πλήρη
+                              αποσύνθεση. Το χώμα που σκέπασαν τα πτώματα δεν
+                              ήταν αρκετό και τα χέρια τους ήταν πάνω από το
+                              χώμα μαυρισμένα, τυμπανιασμένα και σε πλήρη
+                              αποσύνθεση. Η τοποθεσία ήταν γεμάτη σφύκες, μύγες,
+                              τσιδόνες και φοβόντουσαν από το υγειονομείο να μην
+                              τσιμπήσουν κανένα διότι θα μολύνονταν αμέσως. Όταν
+                              άρχισαν τα άτομα του υγειονομείου τη διαδικασία
+                              για να ξεθαφτούν τα πτώματα, προσφέρθηκα να
+                              βοηθήσω ώστε να επισπευσθεί η διαδικασία και να
+                              τελειώσει μια ώρα αρχύτερα η αγωνία για το τί
+                              απέγιναν τα αδέλφια μου. Δεν μπορούσε να
+                              χρησιμοποιηθεί μεταλλικό εργαλείο και έτσι
+                              καθάριζα με τα γυμνά χέρια μου. Στην μεριά που
+                              καθάριζα τα δύο άτομα που βρέθηκαν ήταν μπρούμυτα
+                              και ήταν τα δύο αδέλφια μου. Τα άλλα δύο άτομα
+                              ήταν ανάσκελα. Από τα ευρήματα φαίνεται ότι υπήρξε
+                              αντίσταση από τα θύματα και κακοποιήθηκαν άγρια
+                              από τους δολοφόνους. Υπολογίζουμε ότι τους
+                              πυροβολούσαν κατά την αντίσταση τους. Όπως
+                              βρέθηκαν στον τόπο του εγκλήματος ως πρώτη όψη
+                              φαίνεται ότι τους πυροβόλησαν τους δύο πισώπλατα
+                              και τους άλλους δύο από μπροστά. Όταν κατάλαβα ότι
+                              είναι τα αδέλφια μου έπαθα σοκ και σταμάτησε ο
+                              εγκέφαλος μου να δουλεύει. Έμεινα γονατιστός και
+                              τους έβλεπα. Τότε ήρθε ένας ένστολος αστυνομικός ο
+                              Μιχάλης Παύλου Παχνιώτης, που κρατούσε ένα φάκελο
+                              και ήταν ο υπεύθυνος της ομάδας για την αναγνώριση
+                              των πτωμάτων. Με σήκωσε και κρατώντας με από το
+                              χέρι με πήρε 6-7 μέτρα μακριά από το σημείο και
+                              κάθισα. Σημείωση ότι ο αστυνομικός Μιχάλης Παύλου
+                              Παχνιώτης ήταν ο υπαρχηγός της ομάδας που τους
+                              εκτέλεσε. Το σπίτι του είχε μετατραπεί σε αρχηγείο
+                              τον εοκαβητζίδων στον Αγίο Τύχωνα. Εκεί είχαν
+                              μεταφερθεί τα τέσσερα θύματα όπου έγινε η λεγόμενη
+                              δίκη και καταδικάστηκαν σε θάνατο. Αυτός είχε το
+                              θράσος να μου δώσει βοήθεια και θάρρος. Μετά ο
+                              αστυνομικός αυτός συνελήφθηκε και καταδικάστηκε σε
+                              φυλάκιση για οπλοκατοχή μαζί με τους άλλους
+                              κατηγορούμενους. Κάθισα εκεί ωσότου να τους
+                              ξεθάψουν. Μετά που τους καθάρισαν και τους έπλυναν
+                              με ειδικά φάρμακα αναγνώρισα τα πρόσωπα των
+                              αδελφών μου παρόλο που ήταν σε αποσύνθεση. Στον
+                              χώρο υπήρχαν τέσσερα φέρετρα ρούχενα. Τυλίξαμε το
+                              κάθε πτώμα ξεχωριστά με μια μπατανία και
+                              τοποθετήσαμε το καθένα σε ένα φέρετρο. Μετά τα
+                              φορτώσαμε σε ένα μονοκάμπινο αυτοκίνητο και
+                              κατευθυνθήκαμε στο κοιμητήριο του Αγίου Νικολάου
+                              στη Λεμεσό. Μπήκαμε στο κοιμητήριο και στην άκρη
+                              των υφιστάμενων τάφων, η οικογένεια Κόμπου έσκαψε
+                              ένα τάφο μεγάλο. Θάψαμε τα αδέλφια Χαράλαμπο και
+                              Αναστάση και τον Παντελάκη Χαραλάμπους μαζί. Τον
+                              Χριστάκη Κόμπο μόνο του σε διπλανό τάφο. Μετά
+                              αναχωρήσαμε για τη Λευκωσία. Εγώ είχα βγάλει το
+                              ρολόι του Χαράλαμπου και το έβαλα σε ένα νάιλον
+                              αλλά μύριζε πολύ άσχημα. Στην όλη διαδικασία με
+                              συνόδευσε με το αυτοκίνητο του ο κουμπάρος μου ο
+                              Κύπρος Αλεξανδράκης, συγγενής του Παντελάκη
+                              Χαραλάμπους από τη Λαζανιά.
+                            </div>
                           </div>
                         </div>
-                        <div class="ag-timeline-card_item">
-                          <div class="ag-timeline-card_inner">
-                            <div class="ag-timeline-card_img-box">
-                              <img src="/images/tafos/tafos-palia.jpg" class="ag-timeline-card_img" width="640" height="360" alt="" />
-                            </div>
-                            <div class="ag-timeline-card_info">
-                              <div class="ag-timeline-card_title">Season 8</div>
-                              <div class="ag-timeline-card_desc">
-                                Donec quam felis, ultricies nec, pellentesque eu,
-                                pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-                                vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
-                                venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer
-                                tincidunt. Cras dapibus. Vivamus elementum semper nisi.
-                              </div>
-                            </div>
-                          </div>
-                          <div class="ag-timeline-card_arrow"></div>
-                        </div>
+                        <!-- <div class="ag-timeline-card_arrow"></div> -->
                       </div>
-                        
                     </div>
                   </div>
                 </div>
-              </section>
-            </div>
+              </div>
+            </section>
           </div>
         </section>
       </article>
-    </div>
 
       <!-- Footer -->
       <footer id="footer">
@@ -602,85 +630,12 @@ img {
           </li>
         </ul>
         <ul class="copyright">
-          <li>&copy; ???</li>
+          <li>&copy; iroesfikardou1974</li>
           <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
         </ul>
       </footer>
     </div>
 
-    <script>
-      (function ($) {
-  $(function () {
-
-
-    $(window).on('scroll', function () {
-      fnOnScroll();
-    });
-
-    $(window).on('resize', function () {
-      fnOnResize();
-    });
-
-
-    var agTimeline = $('.js-timeline'),
-      agTimelineLine = $('.js-timeline_line'),
-      agTimelineLineProgress = $('.js-timeline_line-progress'),
-      agTimelinePoint = $('.js-timeline-card_point-box'),
-      agTimelineItem = $('.js-timeline_item'),
-      agOuterHeight = $(window).outerHeight(),
-      agHeight = $(window).height(),
-      f = -1,
-      agFlag = false;
-
-    function fnOnScroll() {
-      agPosY = $(window).scrollTop();
-
-      fnUpdateFrame();
-    }
-
-    function fnOnResize() {
-      agPosY = $(window).scrollTop();
-      agHeight = $(window).height();
-
-      fnUpdateFrame();
-    }
-
-    function fnUpdateWindow() {
-      agFlag = false;
-
-      agTimelineLine.css({
-        top: agTimelineItem.first().find(agTimelinePoint).offset().top - agTimelineItem.first().offset().top,
-        bottom: agTimeline.offset().top + agTimeline.outerHeight() - agTimelineItem.last().find(agTimelinePoint).offset().top
-      });
-
-      f !== agPosY && (f = agPosY, agHeight, fnUpdateProgress());
-    }
-
-    function fnUpdateProgress() {
-      var agTop = agTimelineItem.last().find(agTimelinePoint).offset().top;
-
-      i = agTop + agPosY - $(window).scrollTop();
-      a = agTimelineLineProgress.offset().top + agPosY - $(window).scrollTop();
-      n = agPosY - a + agOuterHeight / 2;
-      i <= agPosY + agOuterHeight / 2 && (n = i - a);
-      agTimelineLineProgress.css({height: n + "px"});
-
-      agTimelineItem.each(function () {
-        var agTop = $(this).find(agTimelinePoint).offset().top;
-
-        (agTop + agPosY - $(window).scrollTop()) < agPosY + .5 * agOuterHeight ? $(this).addClass('js-ag-active') : $(this).removeClass('js-ag-active');
-      })
-    }
-
-    function fnUpdateFrame() {
-      agFlag || requestAnimationFrame(fnUpdateWindow);
-      agFlag = true;
-    }
-
-
-  });
-})(jQuery);
-    </script>
     <!-- Scripts -->
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
@@ -688,5 +643,6 @@ img {
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/timeline.js"></script>
   </body>
 </html>
