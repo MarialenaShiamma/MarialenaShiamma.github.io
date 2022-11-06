@@ -4260,7 +4260,7 @@ a:hover {
   position: relative;
   padding-left: 10px;
   width: 100%;
-  border-left: 1px solid black;
+  border-left: 1px solid #b0945c;
 }
 .item-list .item {
   position: relative;
@@ -4270,6 +4270,7 @@ a:hover {
   display: block;
   padding: 0 18px;
   /* font-size: 13px; */
+  color: rgb(255, 255, 255);
 }
 .item-list .item:before {
   content: "";
@@ -4278,16 +4279,16 @@ a:hover {
   left: -10px;
   width: 12px;
   height: 1px;
-  background: #000;
+  background: #b0945c;
 }
 .item-list .item:first-child:after {
   content: "";
   position: absolute;
   top: 0px;
-  left: -12px;
+  /* left: -12px; */
   width: 5px;
   height: 8px;
-  background: #fff;
+  /* background: #fff; */
 }
 .item-list .item:last-child:after {
   content: "";
@@ -4296,7 +4297,7 @@ a:hover {
   bottom: 0;
   left: -12px;
   width: 5px;
-  background: #fff;
+  /* background: #fff; */
 }
 .item-list .item .item-label {
   position: relative;
@@ -4312,6 +4313,60 @@ a:hover {
   left: -16px;
   width: 13px;
   height: 13px;
-  border-radius: 100%;
+  /* border-radius: 100%; */
   background: #b0945c;
+}
+
+/* URL LISTS */
+.url-list {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+section.special1 {
+  background-color: black;
+  opacity: 0.6;
+  margin: 5% 0 5% 0;
+}
+
+/* POSTS */
+.list-group-item {
+  background-color: white !important;
+  border-radius: 0%;
+  border-color: black !important;
+  margin-bottom: 5%;
+}
+
+a.list-group-item {
+  padding: 0;
+}
+.collapsible {
+  background-color: rgba(175, 148, 93, 0.853);
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active,
+.collapsible:hover {
+  background-color: rgba(230, 193, 120, 0.766);
+  border-radius: 0%;
+}
+
+.content {
+  padding: 0 18px;
+  overflow: hidden;
+  visibility: visible;
+  transition: max-height 0.2s ease-out;
+  background-color: white;
+  text-overflow: ellipsis;
+  height: 10% !important;
+  overflow-wrap: break-word;
+  max-height: fit-content;
 }
