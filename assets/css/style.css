@@ -35,7 +35,7 @@ img:hover{opacity:0.75}
 .top_nav{ text-align:left}
 .top_nav li{ display:inline-block}
 .top_nav li a{ color:#798992; display:inline-block; font-family:"Oswald",sans-serif; font-size:12px; padding:8px 12px; text-transform:uppercase; -webkit-transition:all 0.5; -o-transition:all 0.5; transition:all 0.5}
-.top_nav li a:hover{ color:#FFA500; text-decoration:none; outline:none}
+.top_nav li a:hover{ color:rgba(176, 148, 92, 0.999); text-decoration:none; outline:none}
 .header_top_right{ float:right; display:inline; width:30%; text-align:right}
 .search_form{ padding:3px 0 0}
 .search_form input[type="text"]{ background:none repeat scroll 0 0 #fff; border:medium none; color:#afafaf; display:inline-block; line-height:27px; margin:0; max-height:31px; padding:0 0 0 15px; width:180px}
@@ -44,7 +44,7 @@ img:hover{opacity:0.75}
 .header_bottom_left{float:left; display:inline; width:217px}
 .logo{display:block; font-family:"Oswald",sans-serif; font-size:35px; font-weight:bold; line-height:32px; width:217px}
 .logo > img:hover{opacity:1}
-.logo > strong{color:#FFA500}
+.logo > strong{color:rgba(176, 148, 92, 0.999)}
 .logo > span{display:block; font-size:16px; font-weight:normal}
 .header_bottom_right{float:right; display:inline; width:728px}
 #preloader{position:fixed; top:0; left:0; right:0; bottom:0; background-color:#fff; z-index:99}
@@ -177,7 +177,7 @@ span.meta_more:before{content:" "; font-family:FontAwesome; font-style:normal
 .single_page_content ul{margin-bottom:10px}
 .single_page_content ul li{margin-bottom:3px; padding-left:30px}
 .single_page_content ul li:hover{opacity:0.75}
-.single_page_content ul li:before{ border-radius:0; color:#ffa500; content:""; height:10px; margin-left:-15px; margin-top:5px; position:absolute; width:10px}
+.single_page_content ul li:before{ border-radius:0; color:rgba(176, 148, 92, 0.999); content:""; height:10px; margin-left:-15px; margin-top:5px; position:absolute; width:10px}
 .btn:hover{border-radius:0px; -webkit-transition:0.5s; -o-transition:0.5s; transition:0.5s}
 .post_pagination{ display:inline; float:left; height:92px; margin-top:40px; overflow:hidden; width:100%; margin-bottom:10px}
 .prev{display:inline; float:left; width:50%}
@@ -215,10 +215,10 @@ span.meta_more:before{content:" "; font-family:FontAwesome; font-style:normal
 .archive_caption h2 > a{background-color:rgba(0,0,0,0.4); color:#fff; display:inline-block; font-size:24px; line-height:26px; padding:8px 10px 10px}
 .archive_caption h2 > a:hover{text-decoration:underline}
 .archive_caption p{background-color:rgba(0,0,0,0.4); color:#fff; padding:3px}
-.read_more{border-bottom:4px solid #ffa500; bottom:0; display:block; left:0; position:absolute; text-align:right; width:100%}
-.read_more > span{background-color:#ffa500; color:#fff; display:inline-block; padding:5px 10px}
+.read_more{border-bottom:4px solid rgba(176, 148, 92, 0.999); bottom:0; display:block; left:0; position:absolute; text-align:right; width:100%}
+.read_more > span{background-color:rgba(176, 148, 92, 0.999); color:#fff; display:inline-block; padding:5px 10px}
 .error_page_content{display:inline; float:left; text-align:center; width:100%; padding-bottom:45px}
-.error_page_content h1{display:inline-block; font-size:300px; font-weight:400; position:relative; vertical-align:middle; color:#ffa500}
+.error_page_content h1{display:inline-block; font-size:300px; font-weight:400; position:relative; vertical-align:middle; color:rgba(176, 148, 92, 0.999)}
 .error_page_content h1:after, .error_page_content h1:before{background:none repeat scroll 0 0 #fff; content:""; height:20px; margin-top:-10px; position:absolute; top:50%; -webkit-transform:rotate(45deg); -mz-transform:rotate(45deg); -ms-transform:rotate(45deg); -o-transform:rotate(45deg); transform:rotate(45deg); width:20px}
 .error_page_content h1:after{right:-60px}
 .error_page_content h1:before{left:-60px}
@@ -227,7 +227,7 @@ span.meta_more:before{content:" "; font-family:FontAwesome; font-style:normal
 .error_page_content p{font-size:23px; line-height:31px; margin:36px auto 0; max-width:630px; padding:9px 0 8px; position:relative}
 .error_page_content p:before{ content:""; left:0; position:absolute; top:1px; width:100%}
 .error_page_content p:after{ bottom:1px; content:""; left:0; position:absolute; width:100%}
-.error_page_content p > a:hover{color:#ffa500}
+.error_page_content p > a:hover{color:rgba(176, 148, 92, 0.999)}
 #ContactContent{float:left; display:inline; width:100%}
 .contact_area{display:inline; float:left; padding:0 15px 25px; width:100%}
 .contact_area h1{font-size:45px; font-weight:400; text-transform:uppercase; text-align:center}

@@ -136,7 +136,7 @@ h6,
   justify-content: space-between;
   background: #ffffff;
   border: 1px solid #dee2e6;
-  border-left: 5px solid #ffcc00;
+  border-left: 5px solid rgba(176, 148, 92, 0.999);
 }
 
 .news-carousel .owl-nav {
