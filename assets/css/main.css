@@ -4375,7 +4375,7 @@ a.list-group-item {
   overflow: hidden;
   visibility: visible;
   transition: max-height 0.2s ease-out;
-  background-color: white;
+  /* background-color: white; */
   text-overflow: ellipsis;
   height: 10% !important;
   overflow-wrap: break-word;
@@ -4387,4 +4387,8 @@ a.list-group-item {
 }
 .a {
   color: rgba(176, 148, 92, 0.999);
+}
+
+.newtest {
+  background-image: url("/images/bannerBeige.svg");
 }
