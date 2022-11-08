@@ -132,7 +132,7 @@ ul {
   height: 50px;
   border: none;
   outline: none;
-  background-color: rgba(230, 193, 120, 0.766);
+  background-color: rgba(176, 148, 92, 0.999);
   color: white;
   cursor: pointer;
   padding: 15px;
@@ -159,10 +159,9 @@ ul {
 }
 
 .nav-item:hover {
-  background-color: rgba(230, 193, 120, 0.766);
+  background-color: rgba(176, 148, 92, 0.999);
   /* border-radius: 50px; */
 }
-
 
 .navbar-brand {
   line-height: 40px;
@@ -2857,7 +2856,7 @@ button:disabled,
 
 .spotlight:nth-child(2) {
   background-image: url("/images/banner2.jpg");
-  /* background-color: rgba(194, 140, 74, 0.473); */
+  /* background-color:  rgba(176, 148, 92, 0.999); */
 }
 
 .spotlight:nth-child(3) {
@@ -4267,7 +4266,7 @@ a:hover {
   position: relative;
   padding-left: 10px;
   width: 100%;
-  border-left: 1px solid #b0945c;
+  border-left: 1px solid rgba(176, 148, 92, 0.999);
 }
 .item-list .item {
   position: relative;
@@ -4286,7 +4285,7 @@ a:hover {
   left: -10px;
   width: 12px;
   height: 1px;
-  background: #b0945c;
+  background: rgba(176, 148, 92, 0.999);
 }
 .item-list .item:first-child:after {
   content: "";
@@ -4311,7 +4310,7 @@ a:hover {
   font-weight: bold;
   text-transform: uppercase;
   /* font-size: 13px; */
-  color: #b0945c;
+  color: rgba(176, 148, 92, 0.999);
 }
 .item-list .item .item-label:before {
   content: "";
@@ -4321,7 +4320,7 @@ a:hover {
   width: 13px;
   height: 13px;
   /* border-radius: 100%; */
-  background: #b0945c;
+  background: rgba(176, 148, 92, 0.999);
 }
 
 /* URL LISTS */
@@ -4349,7 +4348,7 @@ a.list-group-item {
   padding: 0;
 }
 .collapsible {
-  background-color: rgba(175, 148, 93, 0.853);
+  background-color: rgba(176, 148, 92, 0.999);
   color: white;
   cursor: pointer;
   padding: 18px;
@@ -4362,7 +4361,7 @@ a.list-group-item {
 
 .active,
 .collapsible:hover {
-  background-color: rgba(230, 193, 120, 0.766);
+  background-color: rgba(176, 148, 92, 0.999);
   border-radius: 0%;
 }
 

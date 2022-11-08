@@ -1,5 +1,3 @@
-
-
 /********** Template CSS ************/
 h1,
 h2,
@@ -12,7 +10,6 @@ h4,
 .font-weight-semi-bold {
   font-weight: 600 !important;
 }
-
 
 h5,
 h6,
@@ -57,7 +54,7 @@ h6,
 
 .navbar-dark .navbar-nav .nav-link {
   padding: 20px 15px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 500;
   text-transform: uppercase;
   outline: none;
@@ -65,11 +62,9 @@ h6,
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-  color: #1E2024;
-  background: #FFCC00;
+  color: #1e2024;
+  background: rgba(176, 148, 92, 0.999);
 }
-
-
 
 @media (max-width: 991.98px) {
   .navbar-dark .navbar-nav .nav-link {
@@ -77,7 +72,7 @@ h6,
   }
 }
 
- .owl-dots {
+.owl-dots {
   position: absolute;
   bottom: 0px;
   right: 25px;
@@ -86,21 +81,19 @@ h6,
   text-align: right;
 }
 
-.mb-2{
+.mb-2 {
   margin-bottom: 0.5rem !important;
 }
 
-
- .owl-dot {
+.owl-dot {
   position: relative;
   display: inline-block;
   margin: 0 5px;
   width: 20px;
   height: 20px;
   background: transparent;
-  transition: .5s;
+  transition: 0.5s;
 }
-
 
 .tranding-carousel .owl-nav .owl-prev,
 .tranding-carousel .owl-nav .owl-next {
@@ -111,28 +104,28 @@ h6,
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #FFFFFF;
+  color: #ffffff;
   background: transparent;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   font-size: 16px;
-  transition: .3s;
+  transition: 0.3s;
 }
 
- .owl-nav .owl-prev:hover,
- .owl-nav .owl-next:hover {
-  color: #FFFFFF;
-  background: #FFCC00;
-  border-color: #FFCC00;
+.owl-nav .owl-prev:hover,
+.owl-nav .owl-next:hover {
+  color: #ffffff;
+  background: rgba(176, 148, 92, 0.999);
+  border-color: rgba(176, 148, 92, 0.999);
 }
 
- .owl-nav .owl-next {
+.owl-nav .owl-next {
   margin-right: 22px;
 }
 
 .owl-nav .owl-prev,
- .owl-nav .owl-next {
-  color: #31404B;
-  border-color: #31404B;
+.owl-nav .owl-next {
+  color: #31404b;
+  border-color: #31404b;
 }
 
 .section-title {
@@ -141,9 +134,9 @@ h6,
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid #dee2e6;
-  border-left: 5px solid #FFCC00;
+  border-left: 5px solid #ffcc00;
 }
 
 .news-carousel .owl-nav {
@@ -167,18 +160,18 @@ h6,
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #31404B;
+  color: #31404b;
   background: transparent;
-  border: 1px solid #31404B;
+  border: 1px solid #31404b;
   font-size: 16px;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .news-carousel .owl-nav .owl-prev:hover,
 .news-carousel .owl-nav .owl-next:hover {
-  color: #31404B;
-  background: #FFCC00;
-  border-color: #FFCC00;
+  color: #31404b;
+  background: rgba(176, 148, 92, 0.999);
+  border-color: rgba(176, 148, 92, 0.999);
 }
 
 .overlay {
@@ -220,7 +213,8 @@ h6,
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -236,8 +230,9 @@ h6,
 a {
   text-decoration: none !important;
 }
-a.badge:hover, a.badge:focus {
-  text-decoration: none ;
+a.badge:hover,
+a.badge:focus {
+  text-decoration: none;
 }
 
 .badge:empty {
@@ -256,30 +251,34 @@ a.badge:hover, a.badge:focus {
 
 .badge-primary {
   color: #212529;
-  background-color: #FFCC00;
+  background-color: rgba(176, 148, 92, 0.999);
 }
 
-a.badge-primary:hover, a.badge-primary:focus {
+a.badge-primary:hover,
+a.badge-primary:focus {
   color: #212529;
-  background-color: #cca300;
+  background-color: rgba(176, 148, 92, 0.999);
 }
 
-a.badge-primary:focus, a.badge-primary.focus {
+a.badge-primary:focus,
+a.badge-primary.focus {
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(255, 204, 0, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(176, 148, 92, 0.999);
 }
 
 .badge-secondary {
   color: #fff;
-  background-color: #31404B;
+  background-color: #31404b;
 }
 
-a.badge-secondary:hover, a.badge-secondary:focus {
+a.badge-secondary:hover,
+a.badge-secondary:focus {
   color: #fff;
   background-color: #1d262c;
 }
 
-a.badge-secondary:focus, a.badge-secondary.focus {
+a.badge-secondary:focus,
+a.badge-secondary.focus {
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(49, 64, 75, 0.5);
 }
@@ -289,12 +288,14 @@ a.badge-secondary:focus, a.badge-secondary.focus {
   background-color: #28a745;
 }
 
-a.badge-success:hover, a.badge-success:focus {
+a.badge-success:hover,
+a.badge-success:focus {
   color: #fff;
   background-color: #1e7e34;
 }
 
-a.badge-success:focus, a.badge-success.focus {
+a.badge-success:focus,
+a.badge-success.focus {
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
 }
@@ -304,13 +305,14 @@ a.badge-success:focus, a.badge-success.focus {
   background-color: #17a2b8;
 }
 
-a.badge-info:hover, a.badge-info:focus {
+a.badge-info:hover,
+a.badge-info:focus {
   color: #fff;
   background-color: #117a8b;
 }
 
-a.badge-info:focus, a.badge-info.focus {
+a.badge-info:focus,
+a.badge-info.focus {
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.5);
 }
-
