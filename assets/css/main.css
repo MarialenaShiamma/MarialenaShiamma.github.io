@@ -4310,6 +4310,7 @@ a:hover {
   width: 5px;
   /* background: #fff; */
 }
+
 .item-list .item .item-label {
   position: relative;
   font-weight: bold;
@@ -4382,13 +4383,12 @@ a.list-group-item {
   max-height: fit-content;
 }
 
-.a:hover {
-  color: rgba(82, 69, 43, 0.999);
-}
-.a {
-  color: rgba(176, 148, 92, 0.999);
+.colorwhitelink a {
+  color: rgba(255, 255, 255, 0.999);
+  line-height: 30px;
+  text-decoration: none;
 }
 
-.newtest {
-  background-image: url("/images/bannerBeige.svg");
+.colorwhitelink a:hover {
+  color: rgba(176, 148, 92, 0.999) !important;
 }
